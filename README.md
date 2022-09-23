@@ -9,7 +9,7 @@
 - I used compound components to build all my components, and I handled the styling aspect via **styled-components**. 
 
 ***Homepage***
-![Homepage](/public/github/netflix_main.png)
+![Homepage](/public/github/netflix_home.png)
 
 ***Sign in***
 ![Signin](/public/github/netflix_signin.png)
