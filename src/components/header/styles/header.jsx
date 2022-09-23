@@ -39,6 +39,7 @@ export const Container = styled.div`
 // Link
 export const Link = styled.p`
 	color: white;
+	font-size: 1.2rem;
 	text-decoration: none;
 	margin-right: 30px;
 	font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
@@ -194,7 +195,7 @@ export const Profile = styled.div`
 	}
 `;
 
-// Feature
+// Feature - we copy all all the styles from the Container
 export const Feature = styled(Container)`
   padding: 150px 0 500px 0;
   flex-direction: column;
@@ -209,7 +210,7 @@ export const Feature = styled(Container)`
 export const Text = styled.p`
 	color: #fff;
 	font-size: 22px;
-	line-height: normal;
+	line-height: 1.5;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
 	margin: 0;
 `;

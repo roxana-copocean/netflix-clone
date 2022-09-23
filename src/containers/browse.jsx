@@ -14,6 +14,7 @@ export function BrowseContainer({ slides }) {
 	const [ loading, setLoading ] = useState(true);
 	const [ slideRows, setSlideRows ] = useState([]);
 	const { firebase } = useContext(FirebaseContext);
+	// pulling the user out of firebase
 	const user = firebase.auth().currentUser || {};
 
 	useEffect(
@@ -44,7 +45,8 @@ export function BrowseContainer({ slides }) {
 				setSlideRows(slides[category]);
 			}
 		},
-		[ searchTerm ]
+		[ searchTerm, slideRows, slides, category ]
+		// aici am adaugat toate dependintele pt ca dadea eroare, inainte aveam doar searchterm
 	);
 	return profile.displayName ? (
 		<React.Fragment>

@@ -28,8 +28,8 @@ export default function SignIn() {
 				history.push(ROUTES.BROWSE);
 			})
 			.catch((error) => {
-				// setEmailAddress("");
-				// setPassword("");
+				setEmailAddress('');
+				setPassword('');
 				setError(error.message);
 			});
 	};
