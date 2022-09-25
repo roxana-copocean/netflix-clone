@@ -91,8 +91,8 @@ export const Dropdown = styled.div`
 	background-color: black;
 	padding: 10px;
 	width: 100px;
-	top: 32px;
-	right: 10px;
+	top: 40px;
+	right: 0px;
 
 	${Group}:last-of-type ${Link} {
 		cursor: pointer;
@@ -105,6 +105,7 @@ export const Dropdown = styled.div`
 		}
 		${Link}, ${Picture} {
 			cursor: default;
+			font-size: 1rem;
 		}
 	}
 
@@ -118,6 +119,7 @@ export const Dropdown = styled.div`
 	}
 `;
 
+// ***********************SEARCH******************************************************
 // Search
 export const Search = styled.div`
 	display: felx;
@@ -145,19 +147,24 @@ export const SearchIcon = styled.button`
 	}
 `;
 
-// Search INput
+// Search Input
 export const SearchInput = styled.input`
 	background-color: #44444459;
 	color: white;
 	border: 1px solid white;
-	transition: width 0.5s;
+	transition: width 0.3s;
 	height: 30px;
 	font-size: 14px;
+	margin-right: .5em;
+
+	/* Active or not */
+	width: ${({ active }) => (active === true ? '200px' : '0')};
+	opacity: ${({ active }) => (active === true ? '1' : '0')};
 	margin-left: ${({ active }) => (active === true ? '10px' : '0')};
 	padding: ${({ active }) => (active === true ? '0 10px' : '0')};
-	opacity: ${({ active }) => (active === true ? '1' : '0')};
-	width: ${({ active }) => (active === true ? '200px' : '0')};
 `;
+
+// **************************************************************************************
 
 // Play Button
 export const PlayButton = styled.button`

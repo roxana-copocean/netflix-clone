@@ -21,7 +21,7 @@ export function BrowseContainer({ slides }) {
 		() => {
 			setTimeout(() => {
 				setLoading(false);
-			}, 3000);
+			}, 2000);
 		},
 		[ profile.displayName ]
 	);
@@ -45,8 +45,7 @@ export function BrowseContainer({ slides }) {
 				setSlideRows(slides[category]);
 			}
 		},
-		[ searchTerm, slideRows, slides, category ]
-		// aici am adaugat toate dependintele pt ca dadea eroare, inainte aveam doar searchterm
+		[ searchTerm ]
 	);
 	return profile.displayName ? (
 		<React.Fragment>
@@ -77,6 +76,7 @@ export function BrowseContainer({ slides }) {
 									<Header.Picture src={user.photoURL} />
 									<Header.TextLink>{user.displayName}</Header.TextLink>
 								</Header.Group>
+								{/* Sign Out */}
 								<Header.Group>
 									<Header.TextLink onClick={() => firebase.auth().signOut()}>
 										Sign out
@@ -97,6 +97,7 @@ export function BrowseContainer({ slides }) {
 				</Header.Feature>
 			</Header>
 
+			{/* The Card - slides  */}
 			<Card.Group>
 				{slideRows.map((slideItem) => (
 					<Card key={`${category}-${slideItem.title.toLowerCase()}`}>

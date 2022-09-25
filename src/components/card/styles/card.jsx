@@ -152,6 +152,7 @@ export const Feature = styled.div`
 		}
 		${FeatureText} {
 			font-size: 14px;
+			line-height: 1.5;
 		}
 	}
 `;
