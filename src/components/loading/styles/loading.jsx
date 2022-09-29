@@ -45,7 +45,7 @@ export const Spinner = styled.div`
 		width: 150px;
 		height: 150px;
 		animation-name: spinner;
-		animation-duration: 800ms;
+		animation-duration: 1000ms;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 	}

@@ -1,6 +1,7 @@
 import React, { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Button, Overlay, Inner, Close } from './style/player';
+/* eslint-disable  no-unused-vars */
 
 // Context
 export const PlayerContext = createContext();
